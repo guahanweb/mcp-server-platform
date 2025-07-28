@@ -1,0 +1,31 @@
+{
+  "name": "@mcp/types",
+  "version": "0.1.0",
+  "description": "TypeScript types and interfaces for MCP server platform",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint src --ext ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules tsconfig.tsbuildinfo"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

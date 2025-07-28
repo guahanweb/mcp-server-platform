@@ -1,0 +1,34 @@
+{
+  "name": "@mcp/orchestration",
+  "version": "0.1.0",
+  "description": "Orchestration layer for MCP servers with workflow management",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint src --ext ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules tsconfig.tsbuildinfo"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@mcp/types": "0.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

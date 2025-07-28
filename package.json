@@ -1,0 +1,76 @@
+{
+  "name": "@mcp/server-platform",
+  "version": "0.1.0",
+  "description": "A comprehensive toolkit for building MCP (Model Context Protocol) servers",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcp/server-platform.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "llm",
+    "server",
+    "toolkit"
+  ],
+  "author": "MCP Platform Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "npm@10.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mcp/server-platform/issues"
+  },
+  "homepage": "https://github.com/mcp/server-platform#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@types/chalk": "^0.4.31",
+    "@types/commander": "^2.12.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.8",
+    "@types/node": "^24.1.0",
+    "@types/ws": "^8.18.1",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint": "^9.32.0",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "turbo": "^2.5.5",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.8.2",
+    "ws": "^8.18.3"
+  }
+}

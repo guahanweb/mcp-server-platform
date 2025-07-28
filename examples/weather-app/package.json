@@ -1,0 +1,23 @@
+{
+  "name": "weather-app-example",
+  "version": "0.1.0",
+  "description": "Weather app MCP server example demonstrating tool creation and API integration",
+  "private": true,
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mcp/server-core": "file:../../packages/core",
+    "@mcp/plugin-base": "file:../../packages/plugin-base", 
+    "@mcp/types": "file:../../packages/types"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

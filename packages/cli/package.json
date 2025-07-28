@@ -1,0 +1,33 @@
+{
+  "name": "@mcp/create-server",
+  "version": "0.1.0",
+  "description": "CLI tool for scaffolding MCP servers and plugins",
+  "main": "./dist/index.js",
+  "bin": {
+    "create-mcp-server": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint src --ext ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules tsconfig.tsbuildinfo"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

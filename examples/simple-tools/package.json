@@ -1,0 +1,22 @@
+{
+  "name": "simple-tools-example",
+  "version": "0.1.0",
+  "description": "Simple MCP server with basic tools",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@mcp/server-core": "workspace:*",
+    "@mcp/plugin-base": "workspace:*",
+    "@mcp/types": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

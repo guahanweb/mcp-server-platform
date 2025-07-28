@@ -1,0 +1,31 @@
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "tools/list"
+}
+
+{
+  "jsonrpc": "2.0", 
+  "id": 2,
+  "method": "tools/call",
+  "params": {
+    "name": "weather:get_current_weather",
+    "arguments": {
+      "location": "San Francisco, CA",
+      "units": "metric"
+    }
+  }
+}
+
+{
+  "jsonrpc": "2.0",
+  "id": 3, 
+  "method": "tools/call",
+  "params": {
+    "name": "weather:search_locations",
+    "arguments": {
+      "query": "London",
+      "limit": 3
+    }
+  }
+}
